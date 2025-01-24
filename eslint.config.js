@@ -45,6 +45,7 @@ export default tseslint.config(
             'import/first': 'error',
             'import/newline-after-import': 'error',
             'import/no-duplicates': 'error',
+            'import/no-unresolved': 'off',
             'no-unused-vars': 'off',
             'unused-imports/no-unused-imports': 'error',
             'unused-imports/no-unused-vars': [
