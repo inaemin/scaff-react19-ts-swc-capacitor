@@ -45,5 +45,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+
+	<!-- 카메라 권한 요청 메시지 -->
+	<key>NSCameraUsageDescription</key>
+	<string>사진 촬영을 위해 카메라 접근이 필요합니다</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>사진 저장을 위해 갤러리 접근이 필요합니다</string>
 </dict>
 </plist>
