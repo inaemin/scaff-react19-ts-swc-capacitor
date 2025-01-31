@@ -1,37 +1,47 @@
-import './App.css';
-import { useState } from 'react';
-import viteLogo from '/vite.svg';
-import reactLogo from './assets/react.svg';
+import { Check, Send } from 'lucide-react';
+import Button from './shared/ui/Button';
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <>
-            <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img
-                        src={reactLogo}
-                        className="logo react"
-                        alt="React logo"
-                    />
-                </a>
+            <div className="flex gap-5">
+                <div className="space-y-2">
+                    <span>PC</span>
+                    <Button color="default">
+                        <Button.Icon icon={Send} />
+                    </Button>
+                    <Button color="danger">
+                        <Button.Icon icon={Check} />
+                        <Button.Label>확인</Button.Label>
+                    </Button>
+                    <Button color="secondary">
+                        <Button.Label>확인</Button.Label>
+                    </Button>
+                    <Button color="primary">
+                        <Button.Label>확인</Button.Label>
+                    </Button>
+                </div>
+
+                <div className="space-y-2">
+                    <span>Mobile</span>
+                    <Button color="default" isMobile>
+                        <Button.Icon icon={Send} />
+                    </Button>
+
+                    <Button color="danger" isMobile>
+                        <Button.Icon icon={Check} />
+                        <Button.Label>확인</Button.Label>
+                    </Button>
+
+                    <Button color="secondary" isMobile>
+                        <Button.Label>확인</Button.Label>
+                    </Button>
+
+                    <Button color="primary" isMobile>
+                        <Button.Label>확인</Button.Label>
+                    </Button>
+                </div>
             </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
         </>
     );
 }
