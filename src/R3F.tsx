@@ -6,7 +6,12 @@ function R3F() {
         <div className="p-4 bg-black">
             <h1>R3F</h1>
             <div style={{ width: '100vw', height: '100vh' }}>
-                <Canvas shadows camera={{ fov: 45, position: [7, 7, 0] }}>
+                <Canvas
+                    camera={{
+                        fov: 100,
+                        near: 0.2,
+                        far: 200,
+                    }}>
                     <MyElement3D />
                 </Canvas>
             </div>
